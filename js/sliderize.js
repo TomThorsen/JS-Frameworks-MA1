@@ -1,5 +1,5 @@
 (function($){
-    $.fn.sliderize = function(slideID,runspeed) {
+    $.fn.sliderize = function(runspeed) {
         var slide;
         var slideamount;
         var i;
@@ -10,7 +10,7 @@
             $(slide[i]).fadeIn(1000);
             setTimeout(run, runspeed);
         }
-        slide = $(slideID).children();
+        slide = this.children();
         slideamount = slide.length;
         i=0;
         setTimeout(run, runspeed);
